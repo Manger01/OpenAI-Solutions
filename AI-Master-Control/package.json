@@ -1,0 +1,15 @@
+{
+  "name": "ai-master-control",
+  "version": "1.0.0",
+  "description": "Központi AI vezérlőrendszer külön modulokkal: email, social, blog, stb.",
+  "main": "core/controller.js",
+  "scripts": {
+    "start": "node core/controller.js"
+  },
+  "keywords": ["AI", "automation", "OpenAI", "controller"],
+  "author": "Pisti & GPT",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
