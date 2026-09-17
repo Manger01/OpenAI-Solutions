@@ -4,7 +4,8 @@
   "description": "Központi AI vezérlőrendszer külön modulokkal: email, social, blog, stb.",
   "main": "core/controller.js",
   "scripts": {
-    "start": "node core/controller.js"
+    "start": "node core/controller.js",
+    "start:game": "python3 -m http.server 4173 --directory web-shooter"
   },
   "keywords": ["AI", "automation", "OpenAI", "controller"],
   "author": "Pisti & GPT",

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEON STRIKE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Neon Strike főoldal">NEON<span>STRIKE</span></a>
+        <div class="top-actions"><button class="icon-button" id="soundButton" aria-label="Hang ki- vagy bekapcsolása">♪</button><button class="pause-button" id="pauseButton">Ⅱ SZÜNET</button></div>
+      </header>
+
+      <section class="game-frame" aria-label="Neon Strike játék">
+        <canvas id="gameCanvas" width="1280" height="720" aria-label="Lövöldözős játékterület"></canvas>
+        <div class="hud" aria-live="polite">
+          <div class="hud-block"><span class="hud-label">PONTSZÁM</span><strong id="score">000000</strong></div>
+          <div class="hud-block center-hud"><span class="hud-label">SZAKASZ</span><strong id="stage">01</strong></div>
+          <div class="health"><span class="hud-label">ENERGIA</span><div class="health-track"><i id="healthBar"></i></div><strong id="healthText">100</strong></div>
+        </div>
+
+        <section class="start-card" id="startCard">
+          <p class="eyebrow">VÁROSI VÉDELMI PROTOKOLL</p>
+          <h1>NEON<br /><span>STRIKE</span></h1>
+          <p class="intro">Vedd át az irányítást. Tisztítsd meg az éjszakát a drónoktól.</p>
+          <label class="portrait-upload" for="portraitInput"><span>+</span> FŐHŐS FOTÓJÁNAK CSERÉJE</label>
+          <input id="portraitInput" type="file" accept="image/*" />
+          <small id="portraitNote">A megadott portré már betöltve — a főhős készen áll a küldetésre.</small>
+          <button class="start-button" id="startButton">KÜLDETÉS INDÍTÁSA <b>→</b></button>
+          <p class="controls">Mozgás: <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> vagy <kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd> &nbsp; • &nbsp; Célzás és tüzelés: <b>EGÉR</b></p>
+        </section>
+
+        <section class="game-over hidden" id="gameOver">
+          <p class="eyebrow">KÜLDETÉS LEZÁRVA</p>
+          <h2 id="gameOverTitle">ÚJRATERVEZÉS</h2>
+          <p id="finalScore">PONTSZÁM: 000000</p>
+          <button class="start-button" id="restartButton">ÚJRAINDÍTÁS <b>↻</b></button>
+        </section>
+        <div class="crosshair" id="crosshair" aria-hidden="true"></div>
+      </section>
+      <footer><span>◈ SEKTOR: BUDAPEST // 2089</span><span>ELIMINÁLVA: <b id="kills">0</b></span><span>BUILD 0.1.0</span></footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
